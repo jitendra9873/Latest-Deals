@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/account"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="My Account" />
+        <item
+            android:id="@+id/saved"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Saved Coupons" />
+        <item
+            android:id="@+id/location"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Location" />
+        <item
+            android:id="@+id/transactions"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="My Transactions" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share App" />
+            <item
+                android:id="@+id/about"
+                android:icon="@drawable/ic_menu_send"
+                android:title="About Us" />
+        </menu>
+    </item>
+
+</menu>
