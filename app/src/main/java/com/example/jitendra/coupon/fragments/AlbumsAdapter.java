@@ -204,10 +204,10 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
         public boolean onMenuItemClick(MenuItem menuItem) {
             switch (menuItem.getItemId()) {
                 case R.id.action_add_favourite:
-                    Toast.makeText(mContext, "Save Coupon", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, "Open", Toast.LENGTH_SHORT).show();
                     return true;
                 case R.id.action_play_next:
-                    Toast.makeText(mContext, "Open", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, "Save Coupon", Toast.LENGTH_SHORT).show();
                     return true;
                 default:
             }

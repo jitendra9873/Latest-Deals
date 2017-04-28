@@ -12,12 +12,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.util.TypedValue;
-import android.view.Menu;
 import android.view.MenuItem;
 
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.daimajia.slider.library.SliderLayout;
+import com.example.jitendra.coupon.account_section.accout;
 import com.example.jitendra.coupon.adapters.ViewPagerAdapter;
 
 import java.util.ArrayList;
@@ -65,12 +65,14 @@ public class MainActivity extends AppCompatActivity
         //adjustFragmentWithBottomBar();
     }
 
+/*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+*/
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -166,6 +168,8 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.account) {
             // Handle the camera action
+            Intent intent = new Intent(MainActivity.this, accout.class);
+            startActivity(intent);
         } else if (id == R.id.saved) {
             Intent i = new Intent(this, savedcoupons.class);
             startActivity(i);

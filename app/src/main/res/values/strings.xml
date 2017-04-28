@@ -13,4 +13,14 @@
     <string name="action_play_next">Play Next</string>
     <string name="backdrop_title">LOVE MUSIC</string>
     <string name="backdrop_subtitle">This season top 20 albums</string>
+
+    <string name="country_prompt">Choose a country</string>
+
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string name="gender_male">Male</string>
+
+    <string name="gender_female">Female</string>
 </resources>

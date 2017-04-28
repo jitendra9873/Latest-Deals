@@ -17,6 +17,7 @@
         <activity
             android:name=".MainActivity"
             android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,19 +27,55 @@
         </activity>
         <activity
             android:label="Transactions"
-            android:name=".mytransactions" >
+            android:name=".mytransactions"
+            android:parentActivityName="com.example.jitendra.coupon.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".mytransactions" />
         </activity>
         <activity
             android:label="Saved coupons"
-            android:name=".savedcoupons" >
+            android:name=".savedcoupons"
+            android:parentActivityName="com.example.jitendra.coupon.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".savedcoupons" />
         </activity>
         <activity
             android:label="About Us"
-            android:name=".aboutus" >
+            android:name=".aboutus"
+            android:parentActivityName="com.example.jitendra.coupon.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".aboutus" />
         </activity>
         <activity
             android:label="Offer Details"
-            android:name=".fragments.details" >
+            android:name=".fragments.details">
+        </activity>
+        <activity
+            android:name="com.example.jitendra.coupon.account_section.Edit"
+            android:label="Edit Account"
+            android:windowSoftInputMode="stateHidden"
+            android:parentActivityName="com.example.jitendra.coupon.account_section.accout"
+            android:screenOrientation="portrait">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jitendra.coupon.account_section.Edit" />
+        </activity>
+
+        <activity android:name="com.example.jitendra.coupon.account_section.accout"
+            android:label="Account"
+            android:parentActivityName="com.example.jitendra.coupon.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jitendra.coupon.account_section.accout" />
+
         </activity>
 
     </application>

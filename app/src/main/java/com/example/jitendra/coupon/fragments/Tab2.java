@@ -140,7 +140,7 @@ public class Tab2 extends Fragment {
                     scrollRange = appBarLayout.getTotalScrollRange();
                 }
                 if (scrollRange + verticalOffset == 0) {
-                    collapsingToolbar.setTitle(getString(R.string.app_name));
+                    collapsingToolbar.setTitle("Best Offers");
                     isShow = true;
                 } else if (isShow) {
                     collapsingToolbar.setTitle(" ");
