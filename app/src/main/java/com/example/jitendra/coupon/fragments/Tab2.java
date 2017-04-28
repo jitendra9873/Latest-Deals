@@ -73,7 +73,7 @@ public class Tab2 extends Fragment {
         int[] covers = new int[]{
                 R.drawable.album1,
                 R.drawable.album2,
-                R.drawable.album3,
+                R.drawable.album31,
                 R.drawable.album4,
                 R.drawable.album5,
                 R.drawable.album6,

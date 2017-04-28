@@ -124,11 +124,11 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
 
     public void getting_data() {
         int[] covers = new int[]{
-                R.drawable.album1,
-                R.drawable.album2,
+                R.drawable.album12,
+                R.drawable.album22,
                 R.drawable.album3,
                 R.drawable.album4,
-                R.drawable.album5,
+                R.drawable.album52,
                 R.drawable.album6,
                 R.drawable.album7,
                 R.drawable.album8,
@@ -154,10 +154,10 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
         a = new contents("Freecharge", description[5], codes[5], covers[0], urls[5]);
         contentslist.add(a);
 
-        a = new contents("Paytm", description[6], codes[6], covers[1], urls[6]);
+        a = new contents("", description[6], codes[6], covers[1], urls[6]);
         contentslist.add(a);
 
-        a = new contents("Ola", description[7], codes[7], covers[2], urls[7]);
+        a = new contents("", description[7], codes[7], covers[2], urls[7]);
         contentslist.add(a);
 
         a = new contents("Uber", description[8], codes[8], covers[3], urls[8]);

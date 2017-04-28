@@ -54,7 +54,8 @@
         </activity>
         <activity
             android:label="Offer Details"
-            android:name=".fragments.details">
+            android:name=".fragments.details"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.example.jitendra.coupon.account_section.Edit"
