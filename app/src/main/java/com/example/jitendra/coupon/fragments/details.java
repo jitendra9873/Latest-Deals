@@ -6,7 +6,6 @@ package com.example.jitendra.coupon.fragments;
 
 import android.app.ActionBar;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -19,10 +18,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.jitendra.coupon.R;
+import com.example.jitendra.coupon.webview;
 
 
 public class details extends AppCompatActivity {
-
 
 
     contents mcontents;
@@ -44,23 +43,34 @@ public class details extends AppCompatActivity {
         Bundle b = this.getIntent().getExtras();
         if (b != null)
             mcontents = b.getParcelable("data");
-        ImageView mimage=(ImageView)findViewById(R.id.imageofsite);
-        TextView mdesc=(TextView)findViewById(R.id.descofsite);
-        TextView mname=(TextView)findViewById(R.id.nameofsite);
-        TextView mcode=(TextView)findViewById(R.id.codeofsite);
+        ImageView mimage = (ImageView) findViewById(R.id.imageofsite);
+        TextView mdesc = (TextView) findViewById(R.id.descofsite);
+        TextView mname = (TextView) findViewById(R.id.nameofsite);
+        TextView mcode = (TextView) findViewById(R.id.codeofsite);
 
-        Button mlink=(Button) findViewById(R.id.linkofsite);
+        Button mlink = (Button) findViewById(R.id.linkofsite);
         mimage.setImageResource(mcontents.getThumbnail());
         mdesc.setText(mcontents.getDesc());
         mname.setText(mcontents.getName());
-        mcode.setText("COUPONCODE: "+mcontents.getCode());
-        mlink.setOnClickListener(new View.OnClickListener() {
+        mcode.setText("COUPONCODE: " + mcontents.getCode());
+/*        mlink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String url = mcontents.getLink();
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 startActivity(i);
+            }
+        });*/
+        mlink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = mcontents.getLink();
+                Intent i = new Intent(getApplicationContext(), webview.class);
+                i.putExtra("epuzzle", url);
+                startActivity(i);
+
+
             }
         });
 
@@ -71,6 +81,7 @@ public class details extends AppCompatActivity {
         TextView my=(TextView)findViewById(R.id.desc);
         my.setText(mcontents.);*/
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -81,6 +92,7 @@ public class details extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 
     public boolean onCreateOptionsMenu(Menu menu) {
         return true;

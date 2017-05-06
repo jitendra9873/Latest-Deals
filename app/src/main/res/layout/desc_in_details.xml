@@ -11,11 +11,11 @@
 
 
     <LinearLayout
-        android:layout_margin="20dp"
         android:layout_width="match_parent"
         android:layout_height="447dp"
-        android:orientation="vertical"
-        android:layout_weight="90">
+        android:layout_margin="20dp"
+        android:layout_weight="90"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
@@ -44,6 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Go To Store"/>
+
 
     </LinearLayout>
 

@@ -6,6 +6,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.daimajia.slider.library.Animations.DescriptionAnimation;
@@ -19,8 +21,8 @@ import java.util.HashMap;
 
 
 public class Tab1 extends Fragment implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener{
-    private SliderLayout mDemoSlider;
     View v;
+    private SliderLayout mDemoSlider;
 
     public Tab1() {
         // Required empty public constructor
@@ -74,15 +76,15 @@ public class Tab1 extends Fragment implements BaseSliderView.OnSliderClickListen
         mDemoSlider.setCustomAnimation(new DescriptionAnimation());
         mDemoSlider.setDuration(4000);
         mDemoSlider.addOnPageChangeListener(this);
-        /*ListView l = (ListView)v.findViewById(R.id.transformers);
+        ListView l = (ListView) v.findViewById(R.id.transformers);
         l.setAdapter(new com.example.jitendra.coupon.TransformerAdapter(this.getContext()));
         l.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                mDemoSlider.setPresetTransformer(((TextView) view).getText().toString());
+                //mDemoSlider.setPresetTransformer(((TextView) view).getText().toString());
                 //Toast.makeText(Tab1.this), ((TextView) view).getText().toString(), Toast.LENGTH_SHORT).show();
             }
-        });*/
+        });
 
         return v;
     }
