@@ -5,11 +5,11 @@ package com.example.jitendra.coupon.fragments;
  */
 
 import android.app.ActionBar;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,7 +18,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.jitendra.coupon.R;
-import com.example.jitendra.coupon.webview;
+import com.thefinestartist.finestwebview.FinestWebView;
 
 
 public class details extends AppCompatActivity {
@@ -66,11 +66,28 @@ public class details extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String url = mcontents.getLink();
-                Intent i = new Intent(getApplicationContext(), webview.class);
-                i.putExtra("epuzzle", url);
-                startActivity(i);
-
-
+                String title1 = mcontents.getName();
+                new FinestWebView.Builder(getApplicationContext()).theme(R.style.FinestWebViewTheme)
+                        .titleDefault(title1)
+                        .showUrl(false)
+                        .statusBarColorRes(R.color.bluePrimaryDark)
+                        .toolbarColorRes(R.color.bluePrimary)
+                        .titleColorRes(R.color.finestWhite)
+                        .urlColorRes(R.color.bluePrimaryLight)
+                        .iconDefaultColorRes(R.color.finestWhite)
+                        .progressBarColorRes(R.color.finestWhite)
+                        .stringResCopiedToClipboard(R.string.copied_to_clipboard)
+                        .stringResCopiedToClipboard(R.string.copied_to_clipboard)
+                        .stringResCopiedToClipboard(R.string.copied_to_clipboard)
+                        .showSwipeRefreshLayout(true)
+                        .swipeRefreshColorRes(R.color.bluePrimaryDark)
+                        .menuSelector(R.drawable.selector_light_theme)
+                        .menuTextGravity(Gravity.CENTER)
+                        .menuTextPaddingRightRes(R.dimen.defaultMenuTextPaddingLeft)
+                        .dividerHeight(0)
+                        .gradientDivider(false)
+                        .setCustomAnimations(R.anim.slide_up, R.anim.hold, R.anim.hold, R.anim.slide_down)
+                        .show(url);
             }
         });
 

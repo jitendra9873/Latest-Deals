@@ -18,7 +18,7 @@
             android:name=".MainActivity"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -53,15 +53,6 @@
                 android:value=".aboutus" />
         </activity>
         <activity
-            android:name=".webview"
-            android:label="WebView"
-            android:parentActivityName="com.example.jitendra.coupon.fragments.details"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".webview" />
-        </activity>
-        <activity
             android:name=".fragments.details"
             android:label="Offer Details"
             android:screenOrientation="portrait">
@@ -87,6 +78,12 @@
                 android:value="com.example.jitendra.coupon.account_section.accout" />
 
         </activity>
+        <activity
+            android:name="com.thefinestartist.finestwebview.FinestWebViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensor"
+            android:theme="@style/FinestWebViewTheme.Light" />
+        <activity android:name=".web1" />
 
     </application>
 
