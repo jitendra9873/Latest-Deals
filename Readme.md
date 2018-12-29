@@ -1,1 +1,1 @@
-App that shows latest deals from websites like Amazon,Freecharge with discount Coupons 
+App that shows latest deals from websites like Amazon,Freecharge with discount Coupons.
